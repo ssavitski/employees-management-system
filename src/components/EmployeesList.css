@@ -1,0 +1,11 @@
+.employees-list {
+  text-align: left;
+  list-style-type: none;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.employees-list__item {
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
