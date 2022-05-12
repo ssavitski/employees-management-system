@@ -6,9 +6,14 @@ const {
   REACT_APP_API_NAMESPACE: namespace,
 } = process.env;
 
+const headers = {
+  'Accept': 'application/json',
+  'Content-Type': 'application/json',
+};
 let baseURL = `${protocol}://${host}`;
 baseURL += namespace ? `/${namespace}` : '';
 
 export default axios.create({
   baseURL,
+  headers,
 });

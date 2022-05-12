@@ -8,8 +8,10 @@ const EmployeesList: React.FC<Props> = ({ items }) => {
   return (
     <ul>
       {
-        items.map(({ id, title }) => (
-          <li key={id}>{title}</li>
+        items.map(({ id, name, email }, index) => (
+          <li key={id}>
+            {index + 1}: {name} ({email})
+          </li>
         ))
       }
     </ul>
