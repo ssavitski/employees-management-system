@@ -28,6 +28,7 @@
       "react-app/jest"
     ]
   },
+  "typings": "./src/global.d.ts",
   "browserslist": {
     "production": [
       ">0.2%",
