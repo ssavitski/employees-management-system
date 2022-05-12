@@ -1,3 +1,4 @@
+import React from 'react';
 interface Props {
   items: Employees.Item[];
 }
@@ -13,6 +14,6 @@ const EmployeesList: React.FC<Props> = ({ items }) => {
       }
     </ul>
   );
-}
+};
 
 export default EmployeesList;
