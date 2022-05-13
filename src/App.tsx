@@ -22,7 +22,7 @@ function App() {
         <h1>Employees management</h1>
       </header>
       <main>
-        <EmployeesList items={items} />
+        <EmployeesList items={items} setItems={setItems} />
       </main>
       <footer className="app-footer">
         &copy; Copyright 2022, Workmotion incorporated. All rights reserved

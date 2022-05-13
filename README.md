@@ -1,6 +1,9 @@
 # Employees management system
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+System allows to manage employees list in different organizations.
+
+## Install development tools and libraries
+Run npm install
 
 ## Available Scripts
 

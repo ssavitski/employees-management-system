@@ -7,16 +7,15 @@
 
 .status-list__item {
   display: inline-block;
-  cursor: pointer;
 }
 
-.status-list__item:hover .status-list__btn,
-.status-list__item:hover .status-list__btn::after {
+.status-list__btn:hover,
+.status-list__btn:hover::after {
   background-color: #d3d3d3;
 }
 
-.status-list__item:hover .status-list__btn--active,
-.status-list__item:hover .status-list__btn--active::after {
+.status-list__btn--active:hover,
+.status-list__btn--active:hover::after {
   background-color: #3477e0;
 }
 

@@ -19,7 +19,7 @@ const StatusList: React.FC<IProps> = ({ statusChange, currentStatus }) => {
           <li key={index} className="status-list__item">
             <button
               onClick={() => statusChange(status)}
-              style={{ zIndex: index * -1 }}
+              style={{ zIndex: statuses.length - index }}
               className={[
                 'status-list__btn',
                 status === currentStatus ? 'status-list__btn--active' : '',
