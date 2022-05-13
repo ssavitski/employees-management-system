@@ -8,8 +8,6 @@ declare namespace Employees {
     id: string;
     email?: string;
     name: string;
-    status: Status;
+    status: 'added' | 'active' | 'inactive' | 'in-check' | 'approved';
   }
-
-  type Status = 'added' | 'active' | 'inactive' | 'in-check' | 'approved';
 }

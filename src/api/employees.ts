@@ -1,8 +1,9 @@
 import instance from './instance';
 
+type DataPayload = Record<string, string>;
 type GetEmployee = () => Promise<Employees.Item[]>;
 type AddEmployee = (employee: Employees.Item) => Promise<Employees.Item>;
-type ChangeEmployee = (id: number, data: Employees.Item) => Promise<Employees.Item>;
+type ChangeEmployee = (id: string, data: DataPayload) => Promise<Employees.Item>;
 
 // Get all employees list
 export const getEmployees: GetEmployee = () =>
