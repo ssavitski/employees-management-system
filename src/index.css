@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  color: #3434e0;
+  transition: color .3s linear;
+}
+
+a:hover {
+  color: #3477e0;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #474a6a;
+  color: white;
+  padding: 2px;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
+}
