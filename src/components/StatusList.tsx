@@ -2,7 +2,7 @@ import React from 'react';
 import './StatusList.css';
 
 const statuses: string[] = [
-  'added', 'active', 'inactive', 'in-check', 'approved',
+  'added', 'in-check', 'approved', 'active', 'inactive',
 ];
 
 interface IProps {
@@ -19,6 +19,7 @@ const StatusList: React.FC<IProps> = ({ statusChange, currentStatus }) => {
           <li key={index} className="status-list__item">
             <button
               onClick={() => statusChange(status)}
+              style={{ zIndex: index * -1 }}
               className={[
                 'status-list__btn',
                 status === currentStatus ? 'status-list__btn--active' : '',

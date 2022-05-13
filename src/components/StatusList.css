@@ -1,0 +1,68 @@
+.status-list {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.status-list__item {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.status-list__item:hover .status-list__btn,
+.status-list__item:hover .status-list__btn::after {
+  background-color: #d3d3d3;
+}
+
+.status-list__item:hover .status-list__btn--active,
+.status-list__item:hover .status-list__btn--active::after {
+  background-color: #3477e0;
+}
+
+.status-list__btn {
+  height: 30px;
+  position: relative;
+  margin-right: 8px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  background-color: #fff;
+  border-right: none;
+  border-left: none;
+  margin-left: -7px;
+  padding-left: 20px;
+  cursor: pointer;
+  transition: background-color .3s linear;
+}
+
+.status-list__item:first-child .status-list__btn {
+  border-left: 1px solid grey;
+  padding-left: 10px;
+  margin-left: 0;
+}
+
+.status-list__btn::after {
+  display: block;
+  content: " ";
+  height: 20px;
+  width: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 100%;
+  top: 4px;
+  margin-left: -10px;
+  border-top: 1px solid grey;
+  border-right: 1px solid grey;
+  z-index: -1;
+  background-color: #fff;
+  transition: background-color .3s linear;
+}
+
+.status-list__btn--active {
+  color: #fff;
+}
+
+.status-list__btn--active,
+.status-list__btn--active::after {
+  background-color: #3477e0;
+}
