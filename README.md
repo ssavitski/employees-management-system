@@ -2,6 +2,8 @@
 
 System allows to manage employees list in different organizations.
 
+![Preview of the management system app](./docs/imgs/preview.png)
+
 ## Install development tools and libraries
 Run npm install
 
