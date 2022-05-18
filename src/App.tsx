@@ -1,7 +1,6 @@
 import React from 'react';
-
-import EmployeesList from './components/EmployeesList';
 import './App.css';
+import EmployeesList from './components/EmployeesList';
 
 function App() {
   return (

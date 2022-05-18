@@ -1,5 +1,4 @@
 import React from 'react';
-
 import StatusList from './StatusList';
 
 interface IProps {

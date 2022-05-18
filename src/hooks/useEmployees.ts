@@ -1,5 +1,4 @@
 import { useCallback, useState } from 'react';
-
 import { changeEmployee, getEmployees } from './../api/employees';
 
 const useEmployees: () => Employees.ContextData = (): Employees.ContextData => {

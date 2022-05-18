@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
 import './StatusList.css';
-
 import EmployeesContext from './../EmployeesContext';
-
-const statuses: string[] = [
-  'added', 'in-check', 'approved', 'active', 'inactive',
-];
 
 interface IProps {
   currentStatus: string;
   employeeId: string;
 }
+
+const statuses: string[] = [
+  'added', 'in-check', 'approved', 'active', 'inactive',
+];
 
 // Output list of employees
 const StatusList: React.FC<IProps> = ({ currentStatus, employeeId }) => {
