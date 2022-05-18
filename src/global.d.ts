@@ -10,4 +10,10 @@ declare namespace Employees {
     name: string;
     status: 'added' | 'active' | 'inactive' | 'in-check' | 'approved';
   }
+
+  interface ContextData {
+    statusChange?: (id: string, status: string) => void;
+    fetchEmployees?: () => Promise<void>;
+    employees?: Item[];
+  }
 }
