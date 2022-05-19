@@ -1,24 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './StatusList.css';
-
-const statuses: string[] = [
-  'added', 'in-check', 'approved', 'active', 'inactive',
-];
+import EmployeesContext from './../EmployeesContext';
+import { Status } from './../index.d';
 
 interface IProps {
-  statusChange: (status: string) => void;
   currentStatus: string;
+  employeeId: string;
 }
 
+const statuses: Status[] = [
+  Status.Added,
+  Status.Incheck,
+  Status.Approved,
+  Status.Active,
+  Status.Inactive,
+];
+
 // Output list of employees
-const StatusList: React.FC<IProps> = ({ statusChange, currentStatus }) => {
+const StatusList: React.FC<IProps> = ({ currentStatus, employeeId }) => {
+  const { statusChange }: Employees.ContextData = useContext(EmployeesContext);
+
   return (
     <ul className="status-list">
       {
         statuses.map((status, index) => (
           <li key={index} className="status-list__item">
             <button
-              onClick={() => statusChange(status)}
+              onClick={() => statusChange?.(employeeId, status)}
               style={{ zIndex: statuses.length - index }}
               className={[
                 'status-list__btn',
