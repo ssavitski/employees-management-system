@@ -1,19 +1,24 @@
 import React, { useContext } from 'react';
 import './StatusList.css';
 import EmployeesContext from './../EmployeesContext';
+import { Status } from './../index.d';
 
 interface IProps {
   currentStatus: string;
   employeeId: string;
 }
 
-const statuses: string[] = [
-  'added', 'in-check', 'approved', 'active', 'inactive',
+const statuses: Status[] = [
+  Status.Added,
+  Status.Incheck,
+  Status.Approved,
+  Status.Active,
+  Status.Inactive,
 ];
 
 // Output list of employees
 const StatusList: React.FC<IProps> = ({ currentStatus, employeeId }) => {
-  const { statusChange } = useContext(EmployeesContext);
+  const { statusChange }: Employees.ContextData = useContext(EmployeesContext);
 
   return (
     <ul className="status-list">

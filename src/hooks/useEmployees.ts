@@ -1,15 +1,17 @@
 import { useCallback, useState } from 'react';
 import { changeEmployee, getEmployees } from './../api/employees';
 
-const useEmployees: () => Employees.ContextData = (): Employees.ContextData => {
+type UseEmployees = () => Employees.ContextData;
+
+const useEmployees: UseEmployees = () => {
   const [items, setItems] = useState<Employees.Item[]>([]);
 
-  async function fetchItems() {
+  const fetchItems: Employees.FetchEmployees = async () => {
     const employees: Employees.Item[] = await getEmployees();
     setItems(employees);
   }
 
-  const statusChange = useCallback((id: string, status: string): void => {
+  const statusChange: Employees.StatusChange = useCallback((id, status) => {
     async function changeData() {
       const updatedItem = await changeEmployee(id, { status });
 

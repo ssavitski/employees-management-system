@@ -5,7 +5,7 @@ import EmployeesContext from './../EmployeesContext';
 
 // Output list of statuses
 const EmployeesList: React.FC = () => {
-  const { fetchEmployees, employees } = useContext(EmployeesContext);
+  const { fetchEmployees, employees }: Employees.ContextData = useContext(EmployeesContext);
 
   useEffect(() => {
     fetchEmployees?.();
